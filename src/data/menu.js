@@ -1,4 +1,4 @@
-const CATEGORIES = [
+export const CATEGORIES = [
     { id: 'fresh-bakes', title: 'Today’s Fresh Bakes', desc: 'Limited batch. Baked fresh every morning.' },
     { id: 'croissants', title: 'Croissants & Artisan Breads', desc: 'Hand-laminated, slow-fermented & naturally leavened.' },
     { id: 'desserts', title: 'Signature Desserts', desc: 'Modern patisserie made with premium couverture.' },
@@ -8,7 +8,7 @@ const CATEGORIES = [
     { id: 'beverages', title: 'Cold Brews & Coolers', desc: 'Shakes, frappes & sparkling refreshers.' }
 ];
 
-const MENU = [
+export const MENU = [
     { id: 'fb1', cat: 'fresh-bakes', name: 'Classic Butter Croissant', price: 180, desc: 'Flaky, buttery layers with a honeycomb interior.', img: 'https://images.unsplash.com/photo-1555507036-ab1f40ce88f4', tags: ['Bestseller'] },
     { id: 'fb2', cat: 'fresh-bakes', name: 'Pain au Chocolat', price: 210, desc: 'Dark Belgian chocolate inside laminated dough.', img: 'https://images.unsplash.com/photo-1608198093002-ad4e005484ec', tags: ['Fresh'] },
     { id: 'fb3', cat: 'fresh-bakes', name: 'Almond Croissant', price: 240, desc: 'Frangipane filled, toasted almonds on top.', img: 'https://images.unsplash.com/photo-1623334044303-241021148842', tags: [] },
