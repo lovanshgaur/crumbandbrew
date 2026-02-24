@@ -2,9 +2,12 @@
 import { useState } from "react";
 import { CATEGORIES, MENU } from "@/data/menu";
 import CategorySection from "@/components/CategorySection";
+import FloatingCartBar from "@/components/FloatingCartBar";
+import CartDrawer from "@/components/CartDrawer";
 
 export default function MenuPage() {
     const [cart, setCart] = useState({});
+    const [isCartOpen, setIsCartOpen] = useState(false);
     function updateCart(item, type) {
         setCart((prev) => {
             const qty = prev[item.id]?.qty || 0;
@@ -52,6 +55,16 @@ export default function MenuPage() {
                     );
                 })}
             </div>
+            <FloatingCartBar
+                cart={cart}
+                onClick={() => setIsCartOpen(true)}
+            />
+            <CartDrawer
+                cart={cart}
+                updateCart={updateCart}
+                isOpen={isCartOpen}
+                onClose={() => setIsCartOpen(false)}
+            />
         </main>
     );
 }
