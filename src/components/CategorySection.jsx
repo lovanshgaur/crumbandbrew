@@ -1,6 +1,6 @@
 import MenuItemCard from "./MenuItemCard";
 
-export default function CategorySection({ category, items }) {
+export default function CategorySection({ category, items, cart, updateCart }) {
   if (!items.length) return null;
 
   return (
@@ -12,7 +12,12 @@ export default function CategorySection({ category, items }) {
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((item) => (
-          <MenuItemCard key={item.id} item={item} />
+          <MenuItemCard
+            key={item.id}
+            item={item}
+            cart={cart}
+            updateCart={updateCart}
+          />
         ))}
       </div>
     </section>
