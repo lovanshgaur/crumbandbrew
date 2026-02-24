@@ -1,6 +1,12 @@
 "use client";
 
-export default function CartDrawer({ cart, updateCart, isOpen, onClose }) {
+export default function CartDrawer({
+  cart,
+  updateCart,
+  isOpen,
+  onClose,
+  onCheckout
+}) {
   const items = Object.values(cart);
 
   if (!isOpen) return null;
@@ -51,10 +57,10 @@ export default function CartDrawer({ cart, updateCart, isOpen, onClose }) {
           <span>₹{total}</span>
         </div>
         <button
-          onClick={onClose}
-          className="mt-8 w-full border rounded-full py-3"
+          onClick={onCheckout}
+          className="mt-8 w-full bg-black text-white rounded-full py-3"
         >
-          Close
+          Proceed to Checkout
         </button>
       </div>
     </>

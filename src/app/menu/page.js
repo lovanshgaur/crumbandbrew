@@ -8,6 +8,7 @@ import CartDrawer from "@/components/CartDrawer";
 export default function MenuPage() {
     const [cart, setCart] = useState({});
     const [isCartOpen, setIsCartOpen] = useState(false);
+
     function updateCart(item, type) {
         setCart((prev) => {
             const qty = prev[item.id]?.qty || 0;
@@ -34,6 +35,10 @@ export default function MenuPage() {
 
             return prev;
         });
+    }
+    function goToCheckout() {
+        localStorage.setItem("cb_cart", JSON.stringify(cart));
+        window.location.href = "/checkout";
     }
 
     return (
@@ -64,6 +69,7 @@ export default function MenuPage() {
                 updateCart={updateCart}
                 isOpen={isCartOpen}
                 onClose={() => setIsCartOpen(false)}
+                onCheckout={goToCheckout}
             />
         </main>
     );
