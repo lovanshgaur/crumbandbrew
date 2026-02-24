@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { CATEGORIES, MENU } from "@/data/menu";
+import MenuItemCard from "@/components/MenuItemCard";
 
 export default function MenuPage() {
     return (
@@ -22,32 +23,7 @@ export default function MenuPage() {
 
                             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                                 {items.map((item) => (
-                                    <div
-                                        key={item.id}
-                                        className="border rounded-xl p-4 space-y-3"
-                                    >
-                                        <div className="aspect-[4/5] bg-neutral-100 rounded-lg overflow-hidden relative">
-                                            <Image
-                                                src="/placeholder.png"
-                                                alt={item.name}
-                                                fill
-                                                className="object-cover"
-                                            />
-                                        </div>
-
-                                        <div className="flex justify-between items-start">
-                                            <h3 className="font-medium leading-tight">
-                                                {item.name}
-                                            </h3>
-                                            <span className="text-sm text-neutral-500">
-                                                ₹{item.price}
-                                            </span>
-                                        </div>
-
-                                        <p className="text-sm text-neutral-500">
-                                            {item.desc}
-                                        </p>
-                                    </div>
+                                    <MenuItemCard key={item.id} item={item} />
                                 ))}
                             </div>
                         </section>
