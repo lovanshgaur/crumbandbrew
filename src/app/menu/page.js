@@ -5,14 +5,31 @@ import CategorySection from "@/components/CategorySection";
 
 export default function MenuPage() {
     const [cart, setCart] = useState({});
-    function updateCart(item) {
+    function updateCart(item, type) {
         setCart((prev) => {
             const qty = prev[item.id]?.qty || 0;
 
-            return {
-                ...prev,
-                [item.id]: { ...item, qty: qty + 1 },
-            };
+            if (type === "inc") {
+                return {
+                    ...prev,
+                    [item.id]: { ...item, qty: qty + 1 },
+                };
+            }
+
+            if (type === "dec") {
+                if (qty <= 1) {
+                    const newCart = { ...prev };
+                    delete newCart[item.id];
+                    return newCart;
+                }
+
+                return {
+                    ...prev,
+                    [item.id]: { ...item, qty: qty - 1 },
+                };
+            }
+
+            return prev;
         });
     }
 

@@ -19,12 +19,32 @@ export default function MenuItemCard({ item, cart, updateCart }) {
       </div>
 
       <p className="text-sm text-neutral-500">{item.desc}</p>
-      <button
-        onClick={() => updateCart(item)}
-        className="text-sm font-medium border rounded-full px-4 py-2"
-      >
-        {qty > 0 ? `Add more (${qty})` : "Add to Tray"}
-      </button>
+      {qty === 0 ? (
+        <button
+          onClick={() => updateCart(item, "inc")}
+          className="text-sm font-medium border rounded-full px-4 py-2"
+        >
+          Add to Tray
+        </button>
+      ) : (
+        <div className="flex items-center gap-3">
+          <button
+            onClick={() => updateCart(item, "dec")}
+            className="border rounded-full px-3 py-1"
+          >
+            −
+          </button>
+
+          <span className="text-sm font-medium">{qty}</span>
+
+          <button
+            onClick={() => updateCart(item, "inc")}
+            className="border rounded-full px-3 py-1"
+          >
+            +
+          </button>
+        </div>
+      )}
     </div>
   );
 }
