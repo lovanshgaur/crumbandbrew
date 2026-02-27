@@ -1,13 +1,36 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  :root {
+    /* Brand Design Tokens */
+    --color-bg: #faf8f6;
+    --color-surface: #ffffff;
+    --color-nude: #f2ebe1;
+    --color-accent: #b8926a;
+    --color-text-main: #1c120c;
+    --color-text-muted: #5c4f46;
+    --color-text-light: #a3968c;
 
+    /* Architectural Mapping (Feeds the React Components) */
+    --bg-base: var(--color-bg);
+    --bg-surface: var(--color-surface);
+    --text-primary: var(--color-text-main);
+    --text-muted: var(--color-text-muted);
+    --border: var(--color-nude);
+    --accent: var(--color-accent);
+    --accent-text: #ffffff; /* Crisp white for text inside accent buttons */
+  }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    @apply antialiased selection:bg-[var(--color-accent)] selection:text-white;
+  }
+
+  /* Force heading hierarchy to use the Serif font */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+  }
 }
