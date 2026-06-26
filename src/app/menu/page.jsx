@@ -1,3 +1,4 @@
+import MenuItemCard from "@/components/MenuItemCard";
 import { CATEGORIES, MENU } from "@/data/menu";
 
 export default function Menu() {
@@ -14,15 +15,11 @@ export default function Menu() {
                 <h2>{category.title}</h2>
                 {category.desc && <p>{category.desc}</p>}
                 <div>
-                  {items.map((item) => {
-                    return (
-                      <div className="menu-item" key={item.id}>
-                        <h4>{item.name}</h4>
-                        <h4>{item.price}</h4>
-                        <h6>{item.desc}</h6>
-                      </div>
-                    );
-                  })}
+                  <div className="flex gap-6">
+                    {items.map((item) => {
+                      return <MenuItemCard key={item.id} item={item} />;
+                    })}
+                  </div>
                 </div>
               </section>
             );
