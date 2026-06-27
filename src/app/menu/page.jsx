@@ -5,25 +5,30 @@ export default function Menu() {
   return (
     <>
       <div className="min-h-screen">
-        <main className="max-w-7xl mx-auto px-6 py-12 flex gap-12">
-          {CATEGORIES.map((category) => {
-            const items = MENU.filter((item) => item.cat === category.id);
-            if (!items.length) return null;
+        <main className="max-w-7xl mx-auto px-6 py12 flex gap-12">
+          <div className="flex-1 space-y-24 pb-32">
+            {CATEGORIES.map((cat) => {
+              const items = MENU.filter((item) => item.cat === cat.id);
+              if (!items.length) return null;
+              console.log(items);
 
-            return (
-              <section id={category.id} key={category.id}>
-                <h2>{category.title}</h2>
-                {category.desc && <p>{category.desc}</p>}
-                <div>
-                  <div className="flex gap-6">
-                    {items.map((item) => {
-                      return <MenuItemCard key={item.id} item={item} />;
-                    })}
+              return (
+                <section id={cat.id} key={cat.id} className="scroll-mt-32">
+                  <div className="mb-6">
+                    <h2 className="text-3xl font-medium tracking-tight">
+                      {cat.title}
+                    </h2>
+                    {cat.desc && <p mt-1>{cat.desc}</p>}
                   </div>
-                </div>
-              </section>
-            );
-          })}
+                  <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+                    {items.map((item) => (
+                      <MenuItemCard key={item.id} item={item} />
+                    ))}
+                  </div>
+                </section>
+              );
+            })}
+          </div>
         </main>
       </div>
     </>

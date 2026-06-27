@@ -1,18 +1,25 @@
 import Image from "next/image";
 export default function MenuItemCard({ item }) {
   return (
-    <div>
-      <Image
-      src={item.img}
-      alt={item.name}
-      fill
-      />
-      <div className="item-info">
-        <h1>{item.name}</h1>
-        <h3>{item.price}</h3>
-        <p>{item.desc}</p>
-
+    <article className="group relative flex flex-col p-4 rounded-2xl ">
+      <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden mb-4">
+        <Image
+          src={item.img}
+          alt={item.name}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+        />
       </div>
-    </div>
+
+      <div className="flex-1 flex flex-col justify-between gap-4">
+        <div>
+          <div className="flex justify-between items-start gap-2 mb-1">
+            <h3 className="text-lg font-medium">{item.name}</h3>
+            <span className="font-semi-bold">{item.label}</span>
+          </div>
+          {item.desc && <p className="text-sm line-clamp-2">{item.desc}</p>}
+        </div>
+      </div>
+    </article>
   );
 }
