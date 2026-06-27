@@ -7,20 +7,19 @@ export default function Menu() {
     <>
     <Header/>
       <div className="min-h-screen">
-        <main className="max-w-7xl mx-auto px-6 py12 flex gap-12">
+        <main className="max-w-7xl mx-auto px-6 py-12 flex gap-12">
+
           <div className="flex-1 space-y-24 pb-32">
             {CATEGORIES.map((cat) => {
               const items = MENU.filter((item) => item.cat === cat.id);
               if (!items.length) return null;
-              console.log(items);
-
               return (
                 <section id={cat.id} key={cat.id} className="scroll-mt-32">
                   <div className="mb-6">
                     <h2 className="text-3xl font-medium tracking-tight">
                       {cat.title}
                     </h2>
-                    {cat.desc && <p mt-1>{cat.desc}</p>}
+                    {cat.desc && <p className="text-[var(--text-muted)] mt-1">{cat.desc}</p>}
                   </div>
                   <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
                     {items.map((item) => (
