@@ -1,48 +1,38 @@
 @import "tailwindcss";
 
-:root {
-  --bg: #faf8f6;
-  --surface: #ffffff;
-  --accent: #b8926a;
+@layer base {
+  :root {
+    --color-bg: #faf8f6;
+    --color-surface: #ffffff;
+    --color-nude: #f2ebe1;
+    --color-accent: #b8926a;
+    --color-text-main: #1c120c;
+    --color-text-muted: #5c4f46;
+    --color-text-light: #a3968c;
 
-  --text-primary: #1c120c;
-  --text-muted: #5c4f46;
-  --border: #f2ebe1;
+    --bg-base: var(--color-bg);
+    --bg-surface: var(--color-surface);
+    --text-primary: var(--color-text-main);
+    --text-muted: var(--color-text-muted);
+    --border: var(--color-nude);
+    --accent: var(--color-accent);
+    --accent-text: #ffffff;
+  }
 
-  --radius: 12px;
-}
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    @apply antialiased selection:bg-[var(--color-accent)] selection:text-white;
+  }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: var(--bg);
-  color: var(--text-primary);
-  font-family: system-ui, -apple-system, sans-serif;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 24px;
-}
-
-h1, h2, h3 {
-  font-weight: 500;
-}
-
-button {
-  cursor: pointer;
-  border: none;
-  background: var(--accent);
-  color: white;
-  padding: 10px 16px;
-  border-radius: var(--radius);
-}
-
-.muted {
-  color: var(--text-muted);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+  }
 }
