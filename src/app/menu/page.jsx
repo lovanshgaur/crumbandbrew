@@ -1,9 +1,11 @@
+import Header from "@/components/Header";
 import MenuItemCard from "@/components/MenuItemCard";
 import { CATEGORIES, MENU } from "@/data/menu";
 
 export default function Menu() {
   return (
     <>
+    <Header/>
       <div className="min-h-screen">
         <main className="max-w-7xl mx-auto px-6 py12 flex gap-12">
           <div className="flex-1 space-y-24 pb-32">
