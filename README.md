@@ -1,6 +1,5 @@
-init - crumb&brew app v2
-Crumb & Brew — premium takeaway ordering web app built with Next.js.
+### init - crumb&brew app v3
 
-Stack: Next.js (App Router) + Tailwind  
-Status: In active development.
+Crumb & Brew — premium takeaway ordering web app.
 
+Status: Purged
