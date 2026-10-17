@@ -1,0 +1,73 @@
+/* ========================Menu Section======================== */
+.section.menu{
+    position: relative;
+}
+.menu-wrapper {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  min-height: 100vh;
+  color: var(--color-text-red);
+}
+.menu-aside {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+}
+.menu-aside h2 {
+  font-size: 2rem;
+  font-style: italic;
+}
+.menu-aside h4 {
+  width: 80%;
+  font-size: 1rem;
+}
+.menu-image-wrapper {
+  width: 80%;
+  height: 60vh;
+  margin-top: 2rem;
+}
+.menu-image-cover {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 0.2rem;
+}
+.menu-image-cover img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.menu-main {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.menu-card {
+  width: 45%;
+  padding: 1rem 2rem;
+}
+.menu-category {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.25rem 0rem;
+}
+.menu-item h6 {
+  font-size: 0.75rem;
+  line-height: 1.3;
+}
+
+.divider{
+    width: 100%;
+    bottom: 0;
+}

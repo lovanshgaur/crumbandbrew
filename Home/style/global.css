@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap");
+
+:root {
+  --color-bg: #faf8f6;
+  --color-surface: #ffffff;
+  --color-nude: #f2ebe1;
+  --color-accent: #b8926a;
+  --ink: #1c120c;
+  --color-text-muted: #5c4f46;
+  --color-text-light: #a3968c;
+  --color-text-red: #601f1b;
+
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --header-h: 6rem;
+  --container-w: 1420px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: auto;
+}
+html,
+body {
+  height: 100%;
+  font-family: var(--font-sans);
+  background-color: var(--color-nude);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+.noise {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.18'/%3E%3C/svg%3E");
+}
+.app-shell {
+  position: relative;
+  z-index: 10;
+}
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
