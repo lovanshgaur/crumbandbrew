@@ -3,14 +3,15 @@ section.philosophy {
   min-height: 80vh;
   display: flex;
   align-items: center;
-  gap: 4rem;
-  justify-content: space-evenly;
+  justify-content: space-between;
   position: relative;
+  padding: 0 5rem;
+  gap: 5rem;
 }
 .section-aside {
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 40%;
 }
 .section-aside h5 {
   font-size: 1rem;
@@ -18,8 +19,8 @@ section.philosophy {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   align-items: start;
-  color: var(--color-accent);
-  font-family: var(--font-mono);
+  color: var(--accent);
+  font-family: var(--mono);
 }
 .section-aside h2 {
   margin-top: 1rem;
@@ -28,7 +29,7 @@ section.philosophy {
   letter-spacing: -0.04em;
 }
 .philosophy .section-content {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -49,7 +50,7 @@ section.philosophy {
 }
 
 /* ======================== Menu Section ======================== */
-.section.menu {
+section.menu {
   position: relative;
 }
 .menu-wrapper {
@@ -60,7 +61,7 @@ section.philosophy {
   justify-content: space-between;
   gap: 3rem;
   min-height: 100vh;
-  color: var(--color-text-red);
+  color: var(--red);
 }
 .menu-aside {
   flex: 1;
@@ -120,4 +121,98 @@ section.philosophy {
 #menu .divider {
   width: 100%;
   bottom: 0;
+}
+.tray-icon {
+  position: absolute;
+  width: 10rem;
+  bottom: -0.5%;
+  right: 1rem;
+}
+.tray-icon img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ======================== Breakfast Section ======================== */
+
+section.breakfast {
+  height: 120vh;
+}
+.breakfast .section-heading {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--serif);
+}
+.breakfast .section-heading h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.breakfast .section-heading h2 {
+  font-size: 3rem;
+  line-height: 0.9;
+}
+.breakfast-cards {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 3rem;
+}
+.breakfast-card {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.breakfast-card img {
+  height: 80%;
+  width: auto;
+  object-fit: cover;
+}
+.breakfast-card h2 {
+  margin-top: 1rem;
+}
+
+/* ======================== Parallax Section ======================== */
+section.parallax {
+  height: 60vh;
+  position: relative;
+}
+.parallax-background {
+  position: absolute;
+  inset: 0;
+  background: url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1600")
+    center/cover;
+  background-attachment: fixed;
+  z-index: 30;
+}
+.parallax-content {
+  position: absolute;
+  inset: 0;
+  background: rgba(28, 18, 12, 0.4);
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--nude);
+}
+.parallax-content h2 {
+  width: 60%;
+  text-align: center;
+  font-size: 4rem;
+  line-height: 0.9;
+  margin-bottom: 3rem;
+}
+.parallax-content h5 {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 500;
 }
