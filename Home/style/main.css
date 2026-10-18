@@ -252,19 +252,67 @@ section.service {
   justify-content: center;
 }
 .service .section-aside {
-  width: 25%;
+  width: 30%;
   height: 400vh;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
+.service-card:first-child{
+  margin-top: 100vh;
+}
 .service-card {
   width: 100%;
   height: 100vh;
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 3rem 1rem;
+  position: relative;
+  border-top: 2px solid var(--accent);
+}
+.serviceCard-top{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+.serviceCard-main h3{
+  font-size: 3rem;
+  letter-spacing: 0.01em;
+  font-family: var(--serif);
+  font-weight: 500;
+  line-height: 0.9;
+}
+.serviceCard-main p{
+  margin-top: 1rem;
+  font-size: 1.15rem;
+  width: 90%;
+}
+.serviceCard-bottom{
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.serviceCard-link{
+  width: 4rem;
+  height: 4rem;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--nude);
+  background: var(--accent);
 }
 .service .section-content {
-  width: 75%;
+  width: 70%;
   height: 400vh;
   position: relative;
 }
