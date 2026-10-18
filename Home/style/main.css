@@ -1,6 +1,56 @@
-/* ========================Menu Section======================== */
-.section.menu{
-    position: relative;
+/* ======================== Philosophy Section ======================== */
+section.philosophy {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  justify-content: space-evenly;
+  position: relative;
+}
+.section-aside {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.section-aside h5 {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  align-items: start;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+}
+.section-aside h2 {
+  margin-top: 1rem;
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+}
+.philosophy .section-content {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.philosophy .section-content p {
+  width: 70%;
+  font-size: 1.25rem;
+  color: var(--muted);
+}
+.philosophy .divider {
+  position: absolute;
+  width: 90%;
+  height: 1px;
+  opacity: 0.4;
+  background: var(--muted);
+  margin: auto;
+  bottom: 0;
+}
+
+/* ======================== Menu Section ======================== */
+.section.menu {
+  position: relative;
 }
 .menu-wrapper {
   width: 90%;
@@ -67,7 +117,7 @@
   line-height: 1.3;
 }
 
-.divider{
-    width: 100%;
-    bottom: 0;
+#menu .divider {
+  width: 100%;
+  bottom: 0;
 }
