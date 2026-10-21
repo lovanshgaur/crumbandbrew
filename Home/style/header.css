@@ -123,7 +123,6 @@ header aside {
   height: 130vh;
   height: 130svh;
   overflow: hidden;
-  background: red;
   transform: translate3d(0, calc(-30svh * var(--y-reveal)), 0);
   will-change: left, width, transform;
 }
@@ -200,4 +199,21 @@ header aside {
   width: 3rem;
   height: 1px;
   background: var(--nude);
+}
+
+@media (max-width:720px) {
+  header{
+    position: relative;
+  }
+  header aside{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+  }
+  header .hero{
+    position: absolute;
+    inset: 0;
+    width: 100%;
+  }
+
 }

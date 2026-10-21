@@ -8,7 +8,7 @@ const breakfastData = [
   },
   {
     image:
-      "https://plus.unsplash.com/premium_photo-1673545518947-ddf3240090b1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Q29mZmVlfGVufDB8fDB8fHww",
+      "https://images.unsplash.com/photo-1549903072-7e6e0bedb7fb?auto=format&fit=crop&q=80&w=800",
     title: "Specialty Brews",
     text: "Single-origin estate beans, precision-dialed for a structured cup.",
     alt: "Coffee"

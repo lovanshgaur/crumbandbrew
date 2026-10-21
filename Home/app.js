@@ -4,11 +4,14 @@ import {
   generateBreakfastCard,
   breakfastCardsAnimation
 } from "./js/breakfast.js";
-import { generateServiceCard } from "./js/service.js";
+import { generateServiceCard, serviceAnimation } from "./js/service.js";
+import { generateBeliefCard } from "./js/belief.js";
 
 headerAnimation();
 createMenuCard();
 menuImageCover();
 generateBreakfastCard();
 breakfastCardsAnimation();
-generateServiceCard()
+generateServiceCard();
+document.addEventListener("DOMContentLoaded", serviceAnimation);
+generateBeliefCard();

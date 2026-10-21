@@ -9,6 +9,7 @@
   --muted: #5c4f46;
   --light: #a3968c;
   --red: #601f1b;
+  --divider: rgba(56, 36, 29, 0.15);
   --serif: "Cormorant Garamond", serif;
   --sans: "Inter", sans-serif;
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);

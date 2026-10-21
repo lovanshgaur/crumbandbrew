@@ -133,7 +133,7 @@ section.menu {
   height: auto;
   object-fit: cover;
 }
-/* ======================== Service Section ======================== */
+/* ======================== Manifesto Section ======================== */
 .manifesto {
   width: 100%;
   height: 100vh;
@@ -149,7 +149,7 @@ section.menu {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
   line-height: 1.2;
   margin: 0 auto;
   color: var(--red);
@@ -157,17 +157,17 @@ section.menu {
 .manifesto-text h2 {
   width: 80%;
 }
-.manifesto-text span{
+.manifesto-text span {
   color: var(--accent);
 }
 /* ======================== Breakfast Section ======================== */
 
 section.breakfast {
-  height: 120vh;
+  height: 140vh;
 }
 .breakfast .section-heading {
   width: 100%;
-  height: 20vh;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -184,7 +184,7 @@ section.breakfast {
 }
 .breakfast-cards {
   width: 100%;
-  height: 90vh;
+  height: 95vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -205,7 +205,58 @@ section.breakfast {
 .breakfast-card h2 {
   margin-top: 1rem;
 }
+.breakfast .section-cta {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.breakfast .section-cta a {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 300;
+}
 
+/* ======================== Belief Section ======================== */
+.beliefs {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 8rem 5%;
+}
+.beliefs-cards {
+  margin-top: 5rem;
+  border-top: 1px solid var(--divider);
+}
+.belief-card {
+  display: flex;
+  align-items: baseline;
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--divider);
+  gap: 2rem;
+}
+
+.belief-id {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--accent-caramel);
+  letter-spacing: 0.1em;
+  flex: 0 0 50px;
+}
+
+.belief-title {
+  flex: 1;
+  font-size: 2.5rem;
+}
+
+.belief-desc {
+  flex: 1;
+  padding-left: 2rem;
+}
+.belief-desc .belief-subtitle {
+  margin-bottom: 0.5rem;
+  color: var(--red);
+}
 /* ======================== Parallax Section ======================== */
 section.parallax {
   height: 60vh;
@@ -243,7 +294,7 @@ section.parallax {
   font-weight: 500;
 }
 /* ======================== Service Section ======================== */
-
+/* 
 section.service {
   width: 100%;
   height: 400vh;
@@ -258,7 +309,7 @@ section.service {
   flex-direction: column;
   gap: 1rem;
 }
-.service-card:first-child{
+.service-card:first-child {
   margin-top: 100vh;
 }
 .service-card {
@@ -271,26 +322,26 @@ section.service {
   position: relative;
   border-top: 2px solid var(--accent);
 }
-.serviceCard-top{
+.serviceCard-top {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 4rem;
 }
-.serviceCard-main h3{
+.serviceCard-main h3 {
   font-size: 3rem;
   letter-spacing: 0.01em;
   font-family: var(--serif);
   font-weight: 500;
   line-height: 0.9;
 }
-.serviceCard-main p{
+.serviceCard-main p {
   margin-top: 1rem;
   font-size: 1.15rem;
   width: 90%;
 }
-.serviceCard-bottom{
+.serviceCard-bottom {
   position: absolute;
   bottom: 5%;
   left: 0;
@@ -301,7 +352,7 @@ section.service {
   align-items: center;
   justify-content: flex-end;
 }
-.serviceCard-link{
+.serviceCard-link {
   width: 4rem;
   height: 4rem;
   font-size: 3rem;
@@ -327,4 +378,130 @@ section.service {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+@media (max-width: 720px) {
+  .philosophy {
+    width: 100%;
+    flex-direction: column;
+    background-color: aqua;
+  }
+  .philosophy div {
+    width: 100%;
+    flex: 1;
+    background-color: darkgoldenrod;
+  }
+} */
+
+/* --- THE EXPERIENCE / SERVICE SECTION --- */
+#service {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+}
+
+.service .section-aside {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 90;
+}
+
+.service-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card {
+  height: 100vh;
+  width: 100%;
+  padding: 4rem 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.serviceCard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--divider);
+  padding-bottom: 1rem;
+}
+.service-id {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+}
+.service-tag {
+  font-family: var(--sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--accent);
+  margin-bottom: 0rem;
+}
+.service-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.1;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+.service-text {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--muted);
+  opacity: 0.85;
+}
+
+.service-main {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  background-color: var(--muted);
+  will-change: left, width;
+  overflow: hidden;
+}
+
+.service-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+  will-change: transform;
+}
+
+.service-hero {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--background);
+  z-index: 55;
+}
+
+.service-hero-text {
+  color: var(--background);
+  margin: 0;
+  text-align: center;
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.1;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
 }
