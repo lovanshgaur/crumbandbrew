@@ -1,3 +1,120 @@
-footer{
-    height: 50vh;
+footer {
+  background-color: var(--dark);
+  color: var(--background);
+  padding: 8rem 5% 4rem;
+}
+.footer-title {
+  font-family: var(--sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--background);
+  opacity: 0.5;
+}
+.footer-subheading {
+  font-family: var(--serif);
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-style: italic;
+  color: var(--background);
+  opacity: 0.8;
+  font-size: 1.2rem;
+}
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 6rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(242, 234, 223, 0.2);
+}
+.footer-top h2 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  max-width: 600px;
+  font-family: var(--serif);
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.footer-top .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--light);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 0.2rem;
+  transition: border-color 0.3s ease;
+  margin-top: 2rem;
+  border-color: rgba(242, 234, 223, 0.4);
+}
+.footer-top .text-link:hover {
+  border-color: var(--background);
+  border-color: var(--light);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+.footer-grid .logo {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+.logo-para {
+  max-width: 250px;
+}
+
+.footer-col h4 {
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--light);
+  margin-bottom: 1.5rem;
+}
+
+.footer-col p,
+.footer-col a {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--light);
+  opacity: 0.8;
+  line-height: 1.8;
+  display: block;
+  margin-bottom: 0.5rem;
+  transition: opacity 0.3s;
+}
+
+.footer-col a:hover {
+  opacity: 1;
+}
+
+.footer-col .text-link {
+  margin-top: 1rem;
+  color: var(--light);
+  border-color: var(--light);
+}
+.footer-col .social-links {
+  margin-top: 2rem;
+}
+.social-links a {
+  font-size: 0.8em;
+}
+.footer-bottom {
+  margin-top: 8rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.5;
 }

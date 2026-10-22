@@ -78,7 +78,7 @@ function serviceAnimation() {
       scrollTrigger: {
         trigger: "#service",
         start: "top top",
-        end: "+=300%",
+        end: "+=400%",
         scrub: true,
         pin: true
       }

@@ -6,12 +6,16 @@ import {
 } from "./js/breakfast.js";
 import { generateServiceCard, serviceAnimation } from "./js/service.js";
 import { generateBeliefCard } from "./js/belief.js";
+import { getTestimonials } from "./js/testimonial.js";
 
-headerAnimation();
-createMenuCard();
-menuImageCover();
-generateBreakfastCard();
-breakfastCardsAnimation();
-generateServiceCard();
-document.addEventListener("DOMContentLoaded", serviceAnimation);
-generateBeliefCard();
+document.addEventListener("DOMContentLoaded", () => {
+  headerAnimation();
+  createMenuCard();
+  menuImageCover();
+  generateBreakfastCard();
+  breakfastCardsAnimation();
+  generateServiceCard();
+  serviceAnimation();
+  generateBeliefCard();
+  getTestimonials();
+});
