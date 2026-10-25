@@ -1,1 +1,6 @@
-init app - crumbNbrew_v3
+# Crumb & Brew
+
+## Status - Active Developement v3
+
+    - init Next App
+    - 
